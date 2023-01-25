@@ -1,10 +1,10 @@
 ---
-title: Home
-layout: home
-nav_order: 1
+title: Getting Started
+layout: default
+nav_order: 2
 ---
 
-# SourceShield Documentation
+# Getting Started
 
 ## What is SourceShield?
 [SourceShield](https://sourceshield.io) is a software supply chain security platform that integrates directly into build and deploy tooling to detect security risks and enforce supply chain best practices. SourceShield is installed as a GitHub Application, which is the sole interface for interacting with the platform. There are no SaaS dashboards, logins, APIs, or other sites that you, or your organization's developers, need to manage.
