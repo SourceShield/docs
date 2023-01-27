@@ -1,0 +1,42 @@
+a {
+    color: #cba236;
+}
+
+a:not([class]) {
+    text-decoration-color: #cba236;
+}
+
+a:not([class]):hover {
+    text-decoration: none;
+}
+
+.icon {
+    color: #cba236;
+}
+
+.site-title:hover {
+    background-image: none;
+}
+
+.side-bar {
+    background-color: #06071b;
+}
+
+.nav-list .nav-list-item .nav-list-link:hover, .nav-list .nav-list-item .nav-list-link.active {
+    background-image: none;
+    background-color: white;
+}
+
+.site-footer {
+    display: none;
+}
+
+.btn-purple {
+    background-color: #06071b;
+    background-image: none;
+}
+
+.btn-purple:hover, .btn-purple.zeroclipboard-is-hover {
+    background-image: none;
+    background-color: #77788f;
+}

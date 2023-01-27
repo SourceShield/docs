@@ -9,7 +9,7 @@ aux_links:
   Blog: https://blog.sourceshield.io
 
 logo: "/assets/images/logo.png"
-color_scheme: dark
+color_scheme: light
 
 footer_content: "Copyright 2023 • SourceShield"
 
@@ -19,3 +19,10 @@ gh_edit_repository: https://github.com/SourceShield/docs
 gh_edit_branch: "main"
 gh_edit_view_mode: "tree"
 
+callouts:
+  note:
+    title: Note
+    color: blue
+  warning:
+    title: Warning
+    color: yellow
