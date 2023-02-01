@@ -29,6 +29,9 @@ These steps cannot be completed until SourceShield pull request checks run at le
   ![Add required status check](assets/images/add-status-check.png)
 1. Scroll to the bottom of the page and click "Save"
 
+Now, when a pull request is opened, SourceShield's status check must pass before the PR can be merged.
+![Required status check](assets/images/pr-check.png)
+
 ## Security Checks Reference
 {: .no_toc }
 
