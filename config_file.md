@@ -30,12 +30,16 @@ commands:
 
 # The "security_checks" section defines security checks that will run on pull requests and commits
 security_checks:
-  # Ensures the PR author account age meets the minimum requirement
   check_name:
     behavior: review
     config:
       config_name: value
 ```
+
+## Behaviors
+SourceShield supports two behaviors when a security check fails:
+* `review` - The PR checks will be marked as pending until the requisite reviews are met as defined in the `reviews` section of the config file.
+* `block` - The PR will be marked as failing and, if configured via GitHub branch protection, cannot be merged until the check passes.
 
 ## Operation Modes
 It is possible to use specific features of SourceShield without using others. For example, you can utilize slash commands by configuring the `commands` section of the config file while not defining any `security_checks` that should run, or vice versa.

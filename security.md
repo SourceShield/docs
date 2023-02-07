@@ -8,9 +8,9 @@ nav_order: 6
 SourceShield is configured to process and store the least amount of data necessary for it to function, and is operated with a minimal infrastructure footprint in a secure cloud environment.
 
 ## Infrastructure Architecture
-SourceShield is hosted on Amazon Web Services (AWS) as a single Lambda function. The function is given a URL, which is fronted by a CloudFront CDN. This CloudFront CDN is configured to only allow inbound requests from IP addresses that [belong to GitHub](https://api.github.com/meta) (only GitHub `hooks` IP addresses are allowed; SourceShield is not directly accessible from Actions runners).
+SourceShield is hosted on Amazon Web Services (AWS) as a single Lambda function in the us-east-1 region. The function is given a URL, which is fronted by a CloudFront CDN. This CloudFront CDN is configured to only allow inbound requests from IP addresses that [belong to GitHub](https://api.github.com/meta) (only GitHub `hooks` IP addresses are allowed; SourceShield is not directly accessible from Actions runners).
 
-There are no traditional data stores; SourceShield does not store any customer data in a database, cache, persistent disk storage, or other location. Data is processed in-memory only. SourceShield does collect logs, which include information such as the GitHub installation ID, organization name, and debug information associated with processing requests, and these logs are retained for 365 days.
+There are no traditional data stores; SourceShield does not store any customer data (aside from application logs) in a database, cache, persistent disk storage, or other location. Data is processed in-memory only. SourceShield does collect logs, which include information such as the GitHub installation ID, organization name, and debug information associated with processing requests, and these logs are retained for 365 days.
 
 SourceShield does not have any other interface besides its GitHub Application; there is no SaaS environment or user credentials.
 

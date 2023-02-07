@@ -2,13 +2,18 @@
 title: Security Checks
 layout: default
 nav_order: 4
+has_children: true
 ---
 
 # Security Checks
 {: .no_toc }
 
+Security checks are one of SourceShield's main features. Security checks run when a pull request is opened and help enforce supply chain security best practices and surface potential risks. Security checks are configured entirely via code within the `.github/sourceshield.yml` configuration file in a repository.
+
 ## Setting up Checks
 {: .no_toc }
+
+Setting up a security check is as simple as adding its configuration to the repository's `.github/sourceshield.yml` config file. Select one or more SourceShield checks that are defined in the [reference section](#security-checks-reference), add them to the `security_checks` section of the `sourceshield.yml` file, and commit the change to the main branch of your repository.
 
 ## Enforcing Checks on Pull Requests
 {: .no_toc }
@@ -35,27 +40,7 @@ Now, when a pull request is opened, SourceShield's status check must pass before
 ## Security Checks Reference
 {: .no_toc }
 
+See the full list of supported checks below:
+
 1. TOC
 {:toc}
-
-<!-- ### Author Account Age
-Ensures the PR author account age is not too new
-
-```yaml
-author_account_age:
-  behavior: review
-  config:
-    min_age_days: 30
-```
-
-### Author Domain
-Ensures the PR author email address belongs to an allowlisted domain
-
-```yaml
-author_domain:
-  behavior: review
-  config:
-    allowed_domains:
-    - acme.com
-    - gmail.com
-``` -->

@@ -2,6 +2,10 @@ a {
     color: #cba236;
 }
 
+::selection {
+    background: #06071b;
+}
+
 a:not([class]) {
     text-decoration-color: #cba236;
 }
@@ -12,6 +16,14 @@ a:not([class]):hover {
 
 .icon {
     color: #cba236;
+}
+
+.main-content .anchor-heading svg {
+    color: #06071b;
+}
+
+.site-header {
+    border-bottom: 0px;
 }
 
 .site-title:hover {
@@ -39,4 +51,12 @@ a:not([class]):hover {
 .btn-purple:hover, .btn-purple.zeroclipboard-is-hover {
     background-image: none;
     background-color: #77788f;
+}
+
+.nav-list .nav-list-item .nav-list-expander {
+    color: #cba236;
+}
+
+.nav-list .nav-list-item > .nav-list .nav-list-item .nav-list-link {
+    color: #978a67
 }
