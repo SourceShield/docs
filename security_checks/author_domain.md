@@ -21,7 +21,7 @@ author_domain:
 | `allowed_domains` | List of email domains. Ex: acme.org | array |  |
 
 ## Description
-The pull request author's GitHub account age is one of many potential signals to consider when reviewing a proposed change. Malicious actors can create new GitHub accounts, without contribution history, and use them to submit malicious changes. Pull requests submitted by new accounts should be more heavily-scrutinized.
+GitHub user account email addresses can be set to corporate or organization domains, which can be used as one signal during a pull request review. This check ensures that a GitHub account belongs to one of a set of pre-approved domains.
 
 ## References
-* [https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-your-membership-in-organizations/about-organization-membership](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-your-membership-in-organizations/about-organization-membership)
+* [https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/adding-an-email-address-to-your-github-account](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/adding-an-email-address-to-your-github-account)
