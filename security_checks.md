@@ -37,6 +37,26 @@ These steps cannot be completed until SourceShield pull request checks run at le
 Now, when a pull request is opened, SourceShield's status check must pass before the PR can be merged.
 ![Required status check](assets/images/pr-check.png)
 
+## Required Reviews
+{: .no_toc }
+
+When a SourceShield security check fails, it can either block the pull request, or the check can enter a pending state until the pull request is reviewed. This feature allows you to "soft block" a pull request until additional it has been reviewed further. For example, you could require that any failed checks be reviewed by someone from the security team before the PR can be merged.
+
+SourceShield uses the `reviews` section of the `.github/sourceshield.yml` file to determine the review criteria:
+
+```yaml
+reviews:
+  count: 2
+  required:
+    - userA
+
+security_checks:
+  author_account_age:
+    behavior: review
+```
+
+This config tells SourceShield to require two approvals, one of which must be from the user `userA`, if the `author_account_age` check fails. If the `author_account_age` check passes, then no review is required (you may still configure GitHub to require reviews on PRs separately from SourceShield's checks).
+
 ## Security Checks Reference
 {: .no_toc }
 

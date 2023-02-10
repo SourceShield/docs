@@ -41,12 +41,31 @@ SourceShield supports two behaviors when a security check fails:
 * `review` - The PR checks will be marked as pending until the requisite reviews are met as defined in the `reviews` section of the config file.
 * `block` - The PR will be marked as failing and, if configured via GitHub branch protection, cannot be merged until the check passes.
 
+You can read more about these behaviors [here](/security_checks.html#required-reviews).
+
 ## Operation Modes
 It is possible to use specific features of SourceShield without using others. For example, you can utilize slash commands by configuring the `commands` section of the config file while not defining any `security_checks` that should run, or vice versa.
 
-## Full Reference File
-The example config file below shows a complete set of all available options for all commands and security checks currently supported by SourceShield. For more details on any of these supported functions, see the [Security Checks](/security_checks.html) and [Commands](/commands.html) pages.
+## Example Config File
+The example config file below shows a set of security checks currently supported by SourceShield. For more details on any of these supported functions, see the [Security Checks](/security_checks.html) and [Commands](/commands.html) pages.
 
 ```yaml
+reviews:
+  count: 2
+  required:
+    - userAbc
 
+security_checks:
+  # Require a review if the PR author account age is < 30 days old
+  author_account_age:
+    behavior: review
+    config:
+      min_age_days: 30
+  # Block the PR if the PR author email address does not belong to acme.com or example.com
+  author_domain:
+    behavior: block
+    config:
+      allowed_domains:
+        - acme.com
+        - example.com
 ```
