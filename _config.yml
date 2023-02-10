@@ -9,6 +9,7 @@ aux_links:
   Blog: https://blog.sourceshield.io
 
 logo: "/assets/images/logo.png"
+favicon_ico: "/assets/images/favicon.ico"
 color_scheme: light
 
 footer_content: "Copyright 2023 • SourceShield"
