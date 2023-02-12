@@ -1,7 +1,7 @@
 ---
 title: Security
 layout: default
-nav_order: 6
+nav_order: 7
 ---
 
 # Security
@@ -24,7 +24,7 @@ The SourceShield GitHub Application listens for specific events that occur withi
 SourceShield listens for the following events:
 * `check_run` - A GitHub "check" is run. The primary functionality of SourceShield is to create passing or failing checks on pull requests.
 * `check_suite` - A GitHub check suite is requested. This happens when a new commit is pushed or a pull request is opened.
-* `issue_comment` - A comment is created on a GitHub issue or pull request. This allows SourceShield to listen for `/sourceshield` slash commands. Note: if the comment does not contain the `/sourcehshield` keyword, the request is dropped and processing is stopped immediately.
+* `issue_comment` - A comment is created on a GitHub issue or pull request. This allows SourceShield to listen for `/sourceshield` slash commands. Note: if the comment does not contain the `/sourceshield` keyword, the request is dropped and processing is stopped immediately.
 * `issues` - A new issue is opened. Similar to the above, no processing occurs unless the `/sourceshield` keyword is used in the issue body.
 * `pull_request` - A pull request is opened. This allows SourceShield to check for the `/sourceshield` keyword in the pull request body.
 * `pull_request_review` - A pull request review is submitted. SourceShield processes the review to determine whether the criteria is met for pull request checks to pass.

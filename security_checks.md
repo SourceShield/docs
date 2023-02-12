@@ -37,6 +37,25 @@ These steps cannot be completed until SourceShield pull request checks run at le
 Now, when a pull request is opened, SourceShield's status check must pass before the PR can be merged.
 ![Required status check](assets/images/pr-check.png)
 
+## Comments
+{: .no_toc }
+
+Some security checks support "comments" in which SourceShield will add a comment on the pull request summarizing information discovered while running the check. This is designed to provide more context for pull request reviewers.
+
+![Required status check](assets/images/check-comments.png)
+
+This feature can be disabled by setting `comment: false` in the config of checks that support comments.
+
+```yaml
+security_checks:
+  author_account_age:
+    behavior: review
+    comment: false
+```
+
+{: .warning }
+Currently, if comments are enabled, SourceShield will comment after each commit on a PR. A feature is in progress to customize this behavior.
+
 ## Required Reviews
 {: .no_toc }
 
