@@ -2,6 +2,7 @@
 title: Home
 layout: home
 nav_order: 1
+image: /assets/images/cover.png
 ---
 
 # SourceShield Documentation
