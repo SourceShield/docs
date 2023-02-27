@@ -32,8 +32,8 @@ For more information on the config file format, see [Config File Reference](/con
 If you're just trying to get started quickly and confirm the installation is working, you can copy and paste the following config file YAML to your `.github/sourceshield.yml` file:
 
 ```yaml
-security_checks:
-  
+commands:
+  enabled: true
 ```
 
 ## Testing the Installation
