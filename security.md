@@ -38,6 +38,7 @@ SourceShield requests the following permissions. Note that, due to GitHub's perm
 * [metadata: read](https://developer.github.com/v3/apps/permissions/#metadata-permissions) - Allows SourceShield to read details about repositories, search user activity, and get collaborator permissions as part of its security checks.
 * [pull_requests: write](https://developer.github.com/v3/apps/permissions/#permission-on-pull-requests) - SourceShield can be configured to comment on pull requests, as well as to request reviews from specific users or teams (when configured to do so). These actions require write access. SourceShield does not currently create pull requests in any repository.
 * [members: read](https://developer.github.com/v3/apps/permissions/#permission-on-members) - SourceShield uses the list of members in an organization as part of some security checks and commands (such as the "PR Author Reputation Report" which includes information about a pull request author's membership in the provided organization).
+* [webhooks: read](https://docs.github.com/en/rest/webhooks/repos#list-repository-webhooks) - SourceShield uses the list of webhooks for a repository to run its check for insecure webhooks configured without SSL.
 
 ## Billing
 All account billing is managed by our PCI-compliant third-party payment provider, Stripe. SourceShield does not have visibility into user payment account numbers.

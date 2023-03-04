@@ -18,7 +18,7 @@ github_actions_allowed:
 
 | Setting | Description | Type | Default |
 | ------- | ----------- | ---- | ------- |
-| `comment` | If set to true, SourceShield will comment on the PR with a message summarizing the GitHub Action workflow changes | boolean | true |
+| `comment` | If set to true, SourceShield will comment on the PR with a message summarizing the GitHub Actions workflow changes | boolean | true |
 
 ## Description
 The use of GitHub Actions can expand the attack surface of your supply chain and their configuration should be carefully reviewed. This check, if enabled, monitors for the addition of files to the repository that indicate the addition or modification of GitHub Actions.
